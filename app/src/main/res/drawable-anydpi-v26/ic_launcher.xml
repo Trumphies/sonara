@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- SONARA v1.10.13 — adaptive icon (API 26+): foreground = mark
+         logo "Dua riak, satu sumber" (ic_logo_ripples, transparan),
+         background = kertas hangat ARUS. Mark sudah diskalakan ke zona
+         aman 66dp di dalam vector foreground. Tidak ada monochrome
+         icon: plumbing-nya tidak ada di proyek ini. -->
+    <background android:drawable="@color/paper_bg" />
+    <foreground android:drawable="@drawable/ic_logo_ripples" />
+</adaptive-icon>
