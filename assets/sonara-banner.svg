@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF8EC"/>
+      <stop offset="1" stop-color="#F2E7D3"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="800" fill="url(#paper)"/>
+
+  <!-- Expanding ripples -->
+  <circle cx="430" cy="400" r="272" fill="none" stroke="#C14A12" stroke-width="2" opacity="0.14"/>
+  <circle cx="430" cy="400" r="320" fill="none" stroke="#1B1813" stroke-width="2" opacity="0.08"/>
+
+  <!-- Ripples mark: "Dua riak, satu sumber" — same geometry as the app logo -->
+  <circle cx="430" cy="400" r="232" fill="none" stroke="#1B1813" stroke-width="26"/>
+  <path d="M306,406 A124,124 0 1 1 368,507" fill="none" stroke="#C14A12" stroke-width="22" stroke-linecap="round"/>
+  <circle cx="430" cy="400" r="18" fill="#1B1813"/>
+
+  <!-- Wordmark -->
+  <text x="760" y="438" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="148" font-weight="800" letter-spacing="12" fill="#1B1813">SONARA</text>
+  <text x="776" y="512" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="36" font-weight="600" letter-spacing="8" fill="#C14A12">LISTEN TOGETHER</text>
+  <text x="776" y="566" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="24" letter-spacing="2" fill="#1B1813" opacity="0.62">native android player · youtube music</text>
+
+  <!-- Garis Arus wave -->
+  <path d="M80,690 C200,662 300,718 430,690 C560,662 660,718 790,690 C920,662 1020,718 1150,690 C1280,662 1380,718 1520,690" fill="none" stroke="#C14A12" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+
+  <!-- Version badge -->
+  <text x="1520" y="64" text-anchor="end" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="24" letter-spacing="3" fill="#1B1813" opacity="0.55">v1.0.8</text>
+</svg>
