@@ -1,0 +1,151 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Musik lokal: MP3 di perangkat (API 33+ pakai READ_MEDIA_AUDIO). -->
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <application
+        android:name=".SonaraApplication"
+        android:label="SONARA"
+        android:icon="@drawable/ic_launcher"
+        android:roundIcon="@drawable/ic_launcher"
+        android:theme="@style/AppTheme"
+        android:allowBackup="true">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- v1.0 (rename: MIXTUNE -> SONARA): deep link Jam utama —
+                 ketuk sonara://jam/<KODE> membuka app dan langsung
+                 join sesi (tanpa hosting/domain; hanya bekerja di HP
+                 yang sudah terinstall SONARA). launchMode singleTop:
+                 warm start masuk lewat onNewIntent MainActivity. -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="sonara" android:host="jam" />
+            </intent-filter>
+            <!-- Fallback legacy (rename v1.0): skema lama mixtune://
+                 tetap diterima supaya link Jam lama yang sudah dishare
+                 tetap membuka app. Jangan dihapus tanpa keputusan baru. -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="mixtune" android:host="jam" />
+            </intent-filter>
+            <!-- v1.10.18: App Link Jam — link https yang bisa diklik di
+                 WhatsApp (bridge GitHub Pages moloqo.github.io/sonara).
+                 autoVerify: sistem memverifikasi assetlinks.json di
+                 host; bila belum terverifikasi, bridge browser tetap
+                 membuka app lewat tombol. Skema custom di atas tetap
+                 didukung penuh; link lama yang sudah dishare tetap jalan. -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="https"
+                    android:host="moloqo.github.io"
+                    android:pathPrefix="/sonara/jam/" />
+            </intent-filter>
+            <!-- v1.10.21: buka link YouTube Music dari app lain —
+                 berbasis chooser, TANPA autoVerify (filter App Link
+                 Jam di atas tidak disentuh). music.youtube.com/watch
+                 dan youtu.be; parse + resolve di MainActivity. -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="https"
+                    android:host="music.youtube.com"
+                    android:pathPrefix="/watch" />
+                <data
+                    android:scheme="https"
+                    android:host="youtu.be" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".service.PlaybackService"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback" />
+
+        <!-- v1.10.17: widget home screen (2x1 + 4x1) — satu provider
+             class, dua metadata. exported=true wajib: sistem yang
+             memanggil provider. Tidak ada permission baru. -->
+        <receiver
+            android:name=".widget.SonaraWidgetProvider"
+            android:exported="true"
+            android:label="SONARA">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/sonara_widget_info_small" />
+        </receiver>
+        <receiver
+            android:name=".widget.SonaraWidgetProvider"
+            android:exported="true"
+            android:label="SONARA Wide">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/sonara_widget_info_wide" />
+        </receiver>
+
+        <!-- v1.10.16: FileProvider untuk berbagi kartu lirik (PNG di
+             cache). Hanya path lyric-cards yang diekspos; tidak ada
+             permission baru. -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.sonara.app.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- v1.10: komponen Play Services Auth. Build manual TIDAK
+             punya manifest merger, jadi deklarasi dari manifest AAR
+             ditulis manual di sini (disalin dari manifest AAR
+             play-services-auth / play-services-base / basement). -->
+        <activity
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+            android:visibleToInstantApps="true" />
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+</manifest>
