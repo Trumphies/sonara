@@ -1,3 +1,5 @@
+![SONARA](assets/sonara-banner.svg)
+
 # SONARA
 
 SONARA is a native Android music player for YouTube Music. It needs no
