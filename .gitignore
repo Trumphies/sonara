@@ -1,0 +1,21 @@
+# Build outputs and local tooling
+*.apk
+*.aab
+*.idsig
+*.keystore
+*.jks
+*.aar
+*.so
+build-manual/
+!build-manual/build.sh
+backups/
+harness*/
+*.log
+
+# Gradle / IDE (if a Gradle build is added later)
+.gradle/
+build/
+local.properties
+.idea/
+*.iml
+.DS_Store
