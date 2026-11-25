@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Info widget 2x1 (v1.10.17). Ukuran sel mengikuti rumus Android
+     (70n-30): 2 kolom = 110dp, 1 baris = 40dp. updatePeriodMillis 0 —
+     widget di-push sendiri saat status putar berubah (SonaraWidget),
+     bukan polling sistem. -->
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="110dp"
+    android:minHeight="40dp"
+    android:minResizeWidth="110dp"
+    android:minResizeHeight="40dp"
+    android:targetCellWidth="2"
+    android:targetCellHeight="1"
+    android:updatePeriodMillis="0"
+    android:initialLayout="@layout/widget_sonara_small"
+    android:previewLayout="@layout/widget_sonara_small"
+    android:resizeMode="horizontal"
+    android:widgetCategory="home_screen" />
