@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- SONARA v1.10.18 — mark Jam "broadcast" di atas KERTAS
+         (gambar ulang motif broadcast referensi user 22 Nov 2026
+         sesuai tema ARUS; preview terverifikasi di
+         logo-concepts/jam-broadcast-arus-preview.png).
+         Geometri (viewport 48, pusat 24,24, round cap):
+         dot r=4.6; arc dalam r=11; arc luar r=17.5; stroke 3.2;
+         sudut -50..50 (kanan) dan 130..230 (kiri).
+         Warna varian terang: dot + arc dalam = oranye bakar #C14A12,
+         arc luar = charcoal #1B1813. -->
+    <path
+        android:fillColor="#C14A12"
+        android:pathData="M24,19.4a4.6,4.6 0 1,0 0,9.2a4.6,4.6 0 1,0 0,-9.2" />
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#C14A12"
+        android:strokeWidth="3.2"
+        android:strokeLineCap="round"
+        android:pathData="M31.1,15.6 A11,11 0 0 1 31.1,32.4" />
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#C14A12"
+        android:strokeWidth="3.2"
+        android:strokeLineCap="round"
+        android:pathData="M16.9,15.6 A11,11 0 0 0 16.9,32.4" />
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#1B1813"
+        android:strokeWidth="3.2"
+        android:strokeLineCap="round"
+        android:pathData="M35.3,10.6 A17.5,17.5 0 0 1 35.3,37.4" />
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#1B1813"
+        android:strokeWidth="3.2"
+        android:strokeLineCap="round"
+        android:pathData="M12.7,10.6 A17.5,17.5 0 0 0 12.7,37.4" />
+</vector>

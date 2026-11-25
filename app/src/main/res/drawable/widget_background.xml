@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Latar widget home screen (v1.10.17): kartu gelap yang sama dengan
+     sheet gelap lagu (TrackSheet DarkSheetBg #211D19), teks krem. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="20dp" />
+    <solid android:color="#211D19" />
+</shape>

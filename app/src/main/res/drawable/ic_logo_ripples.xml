@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- SONARA v1.10.13 — logo "Dua riak, satu sumber" (pilihan user
+         22 Nov 2026, FINAL setelah 7 batch konsep): satu titik pusat +
+         satu busur oranye bercelah di kiri-bawah + satu cincin charcoal
+         penuh di luar. Makna: satu lagu yang beriak keluar, didengar
+         bareng. Redraw VECTOR dari konsep (bukan trace raster).
+         Palet ARUS persis dari kode: oranye bakar #C14A12 (ikon
+         launcher lama), charcoal = InkBlack #1B1813 (Theme.kt),
+         latar kertas #FFF8EC (colors.xml paper_bg, dipakai ikon
+         launcher/adaptive background). Geometri diskalakan ke zona aman
+         adaptive icon (diameter mark ~64dp dari 108dp) supaya cincin
+         luar tidak terpotong mask lingkaran launcher. Celah busur
+         dalam DIPERTAHANKAN di kiri-bawah seperti konsep (bukan posisi
+         acak) supaya tetap terbaca sebagai riak, bukan spinner. -->
+    <!-- Cincin luar: lebih tebal dari busur dalam. -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#1B1813"
+        android:strokeWidth="3.2"
+        android:pathData="M54,54m-29,0a29,29 0,1 0,58,0a29,29 0,1 0,-58,0" />
+    <!-- Busur dalam: sapuan ~300°, celah ~60° di kiri-bawah.
+         Start (38.5,54.8) = jam 9 sedikit ke bawah; end (46.3,67.4) =
+         jam setengah 8; large-arc + sweep searah jarum jam melewati
+         atas-kanan-bawah. Ujung membulat seperti konsep. -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#C14A12"
+        android:strokeWidth="2.8"
+        android:strokeLineCap="round"
+        android:pathData="M38.5,54.8 A15.5,15.5 0 1 1 46.3,67.4" />
+    <!-- Titik pusat: kecil tapi jelas. -->
+    <path
+        android:fillColor="#1B1813"
+        android:pathData="M54,54m-2.2,0a2.2,2.2 0,1 0,4.4,0a2.2,2.2 0,1 0,-4.4,0" />
+</vector>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- SONARA v1.10.13 — ikon launcher: latar kertas hangat + logo
+         "Dua riak, satu sumber" (pilihan user 22 Nov 2026, FINAL).
+         Geometri mark SAMA dengan ic_logo_ripples.xml (satu sumber
+         kebenaran bentuk); di sini ditambah latar #FFF8EC penuh untuk
+         ikon legacy (API < 26). API 26+ memakai varian adaptive icon
+         drawable-anydpi-v26/ic_launcher.xml. -->
+    <path
+        android:fillColor="#FFF8EC"
+        android:pathData="M0,0h108v108H0z" />
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#1B1813"
+        android:strokeWidth="3.2"
+        android:pathData="M54,54m-29,0a29,29 0,1 0,58,0a29,29 0,1 0,-58,0" />
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#C14A12"
+        android:strokeWidth="2.8"
+        android:strokeLineCap="round"
+        android:pathData="M38.5,54.8 A15.5,15.5 0 1 1 46.3,67.4" />
+    <path
+        android:fillColor="#1B1813"
+        android:pathData="M54,54m-2.2,0a2.2,2.2 0,1 0,4.4,0a2.2,2.2 0,1 0,-4.4,0" />
+</vector>
