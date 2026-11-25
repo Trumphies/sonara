@@ -7,6 +7,13 @@ account sign-in for playback, and pairs an editorial, theme-driven
 interface with shared listening, synced lyrics, downloads, podcasts,
 and local files.
 
+## Download
+
+Grab the ready-to-install APK from the
+[v1.0.8 release](https://github.com/Trumphies/sonara/releases/tag/v1.0.8) —
+no build needed. Debug build, arm64 Android; sideload it by allowing
+install from unknown sources.
+
 ## Features
 
 - **Playback** — streaming with background playback, lock-screen controls,
