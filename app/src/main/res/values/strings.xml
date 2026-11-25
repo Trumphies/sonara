@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SONARA</string>
+    <!-- Widget home screen (v1.10.17): semua string Inggris, seperti UI. -->
+    <string name="widget_empty">Nothing playing — open SONARA to play something.</string>
+    <string name="widget_artwork_desc">Current song artwork</string>
+    <string name="widget_play_pause_desc">Play or pause</string>
+    <string name="widget_next_desc">Next song</string>
+    <string name="widget_prev_desc">Previous song</string>
+</resources>

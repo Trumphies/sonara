@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Parent AppCompat (pola Widget Pet): tema XML Material3 Compose
+         tidak ada di AAR androidx.compose.material3 — tema Material3
+         SONARA diterapkan di Kotlin (SonaraTheme), tema XML ini hanya
+         alas jendela Activity. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Jendela alas: kertas hangat ARUS (bukan kilat gelap saat
+             cold start). Ikon status/nav gelap — sesuai latar terang;
+             layar detail gelap mengubahnya sendiri saat tampil
+             (SystemBarAppearance) dan mengembalikannya saat keluar. -->
+        <item name="android:windowBackground">@color/paper_bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+</resources>
