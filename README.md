@@ -10,9 +10,21 @@ and local files.
 ## Download
 
 Grab the ready-to-install APK from the
-[v1.0.8 release](https://github.com/Trumphies/sonara/releases/tag/v1.0.8) —
+[v1.1 release](https://github.com/Trumphies/sonara/releases/tag/v1.1) —
 no build needed. Debug build, arm64 Android; sideload it by allowing
-install from unknown sources.
+install from unknown sources. The previous
+[v1.0.8 release](https://github.com/Trumphies/sonara/releases/tag/v1.0.8)
+remains available.
+
+What's new in v1.1:
+- Lyric share picker: the Share button is now pinned in a fixed footer,
+  so it stays visible no matter how many lines are selected.
+- Lyric card preview header now shows the song's real cover artwork
+  instead of the vinyl-disc placeholder.
+- Year card is now portrait 9:16 (1080x1920).
+
+Note: the source tree is still at the v1.0.8 level and has not yet been
+synced to the v1.1 code.
 
 ## Features
 
