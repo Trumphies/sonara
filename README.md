@@ -10,21 +10,24 @@ and local files.
 ## Download
 
 Grab the ready-to-install APK from the
-[v1.1 release](https://github.com/Trumphies/sonara/releases/tag/v1.1) —
+[v1.2 release](https://github.com/Trumphies/sonara/releases/tag/v1.2) —
 no build needed. Debug build, arm64 Android; sideload it by allowing
 install from unknown sources. The previous
-[v1.0.8 release](https://github.com/Trumphies/sonara/releases/tag/v1.0.8)
+[v1.1 release](https://github.com/Trumphies/sonara/releases/tag/v1.1)
 remains available.
 
-What's new in v1.1:
-- Lyric share picker: the Share button is now pinned in a fixed footer,
-  so it stays visible no matter how many lines are selected.
-- Lyric card preview header now shows the song's real cover artwork
-  instead of the vinyl-disc placeholder.
-- Year card is now portrait 9:16 (1080x1920).
+What's new in v1.2:
+- English theme display names, streak on the year card, and 7 year-card
+  + 7 lyric-card designs to pick from. 
+- All visible LRCLIB brand labels removed; the first-launch onboarding
+  questions removed entirely.
+  - Local Taste Profile, smart autoplay, feedback controls, and personal
+    Home shelves.
+- Year-card data permanently saved and synced with the signed-in Google
+  account, so it survives reinstalls.
 
 Note: the source tree is still at the v1.0.8 level and has not yet been
-synced to the v1.1 code.
+synced to the v1.2 code.
 
 ## Features
 
