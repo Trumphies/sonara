@@ -26,5 +26,5 @@
   <path d="M80,690 C200,662 300,718 430,690 C560,662 660,718 790,690 C920,662 1020,718 1150,690 C1280,662 1380,718 1520,690" fill="none" stroke="#C14A12" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
 
   <!-- Version badge -->
-  <text x="1520" y="64" text-anchor="end" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="24" letter-spacing="3" fill="#1B1813" opacity="0.55">v1.1</text>
+  <text x="1520" y="64" text-anchor="end" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="24" letter-spacing="3" fill="#1B1813" opacity="0.55">v1.2</text>
 </svg>
