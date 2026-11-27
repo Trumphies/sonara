@@ -17,12 +17,8 @@ install from unknown sources. The previous
 remains available.
 
 What's new in v1.2:
-- English theme display names, streak on the year card, and 7 year-card
-  + 7 lyric-card designs to pick from. 
-- All visible LRCLIB brand labels removed; the first-launch onboarding
-  questions removed entirely.
-  - Local Taste Profile, smart autoplay, feedback controls, and personal
-    Home shelves.
+- Local Taste Profile, smart autoplay, feedback controls, and personal
+  Home shelves.
 - Year-card data permanently saved and synced with the signed-in Google
   account, so it survives reinstalls.
 
